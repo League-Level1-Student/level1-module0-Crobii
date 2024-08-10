@@ -35,10 +35,13 @@ import processing.core.PImage;
  * 10.Use the song.play() and song.stop() methods to play a song ONLY when
  *    the record is spinning.
  */
+
+
+
 public class SpinningRecord extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
-    
+    int spin;
     Song song = new Song("awesomeTrack.mp3");
     PImage pictureOfRecord;
     
@@ -49,12 +52,13 @@ public class SpinningRecord extends PApplet {
 
     @Override
     public void setup() {
-        
+        pictureOfRecord = loadImage("spinningRecord.png");
+        pictureOfRecord.resize(WIDTH, HEIGHT);
     }
 
     @Override
     public void draw() {
-        
+        spin++;
     }
 
     static public void main(String[] args) {
