@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/_01_methods/_2_spinning_record/Blocks_disc.png</name>
+			<type>1</type>
+			<location>/Users/league/Downloads/Blocks_disc.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>

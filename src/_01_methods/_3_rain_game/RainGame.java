@@ -60,12 +60,15 @@ public class RainGame extends PApplet {
 
     @Override
     public void setup() {
-
+    	bucket = loadImage("images/bucket.png");
+    	bucket.resize(100, 100);
     }
 
     @Override
     public void draw() {
-
+    	fill(100, 100, 100);
+    	rect(0, 0, WIDTH, HEIGHT);
+    	
     }
 
     static public void main(String[] args) {

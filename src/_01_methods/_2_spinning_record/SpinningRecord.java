@@ -41,10 +41,15 @@ import processing.core.PImage;
 public class SpinningRecord extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
-    int spin;
+    int spin = 0;
     Song song = new Song("awesomeTrack.mp3");
     PImage pictureOfRecord;
+    boolean clicked = false;
     
+    @Override
+    public void mouseClicked() {
+    	clicked = !clicked;
+    }
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -52,14 +57,21 @@ public class SpinningRecord extends PApplet {
 
     @Override
     public void setup() {
-        pictureOfRecord = loadImage("spinningRecord.png");
+        pictureOfRecord = loadImage("images/Disc.jpg");
         pictureOfRecord.resize(WIDTH, HEIGHT);
+        image(pictureOfRecord, 0, 0);
     }
 
     @Override
     public void draw() {
+  
+    	if (clicked == true){
         spin++;
+        rotateImage(pictureOfRecord, spin);
+        image(pictureOfRecord, 0, 0);
+    	}
     }
+    
 
     static public void main(String[] args) {
         PApplet.main(SpinningRecord.class.getName());
